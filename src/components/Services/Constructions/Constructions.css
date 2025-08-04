@@ -1,0 +1,29 @@
+.Constructions-feature {
+    
+  padding: 20px;
+  border: solid 1px #ddd;
+  margin-bottom: 20px;
+  background: #fbfbfb;
+}
+
+.Constructions-feature i {
+    position: absolute;
+    display: inline-block;
+    color: #030E3C;
+    border: solid 2px #030E3C;
+    background: #EFE204;
+    padding: 0px;
+    border-radius: 50px;
+    width: 24px;
+    height: 24px;
+    margin: 0px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 50px;
+    font-size: x-large;
+}
+
+.Constructions-feature .text {
+    padding-left: 80px;
+}

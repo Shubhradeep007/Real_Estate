@@ -1,0 +1,17 @@
+.ourteamimages{
+    width: 80%;
+    height: 80%;
+    margin-right: 11px;
+}
+
+.card-icons a{
+    padding: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: larger;
+} 
+
+.card-icons a:hover{
+  text-decoration: none;
+  color: gray;
+} 

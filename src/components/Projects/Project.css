@@ -1,0 +1,35 @@
+.image-container2 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container2 img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  overflow: hidden;
+  filter: blur(2px);
+}
+
+.text-overlay1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(53, 87, 161, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text-overlay1 p {
+  margin-left: 175px;
+  font-size: 40px;
+  color: white;
+}
+
+.fillters button {
+  margin-left: 15px;
+}

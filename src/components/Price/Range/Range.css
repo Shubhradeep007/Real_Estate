@@ -1,0 +1,33 @@
+.prices-range {
+  display: block;
+  background-color: #ffffff;
+  height: 500px;
+  width: 280px;
+  border: 1px solid gray;
+  margin: 10px;
+  box-shadow: 10px 10px lightblue;
+  transition: width 1s, height 2s;
+}
+
+.prices-range:hover {
+  width: 300px;
+  height: 550px;
+}
+
+.prices-range h4 {
+  background-color: #656565;
+  height: 50px;
+  padding-top: 10px;
+  color: white;
+}
+
+.prices-range ul {
+  list-style-type: none;
+}
+
+.prices-range li {
+  font-size: large;
+  margin-top: 25px;
+  /* border: 1px solid black; */
+  width: 200px;
+}

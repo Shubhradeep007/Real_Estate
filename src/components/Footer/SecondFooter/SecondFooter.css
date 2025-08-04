@@ -1,0 +1,14 @@
+.all-links p a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px 5px 10px;
+}
+
+.last-pannel p {
+    margin-left: 250px;
+}
+
+
+.all-links a:hover{
+    text-decoration: underline;
+}

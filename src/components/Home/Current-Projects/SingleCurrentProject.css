@@ -1,0 +1,32 @@
+.main-container {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  margin-top: 24px;
+}
+
+.image-col1 {
+  display: flex;
+
+  align-items: center;
+}
+
+.description-col1 {
+  display: flex;
+  
+  font-size: 1.18rem;
+  color: #333;
+
+}
+
+@media (max-width: 768px) {
+  .image-col1, .description-col1 {
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 18px;
+  }
+  .description-col1 {
+    font-size: 1rem;
+  }
+}
