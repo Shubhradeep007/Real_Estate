@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
@@ -6,10 +7,27 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import LoginModal from "../../Pages/Login/LoginModal";
+import SignupModal from "../../Pages/Signup/SignupModal";
 
 const NavbarCoding = () => {
   const naviGate = useNavigate();
+const [showLogin, setShowLogin] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
+
+  const handleCloseLogin = () => setShowLogin(false);
+  const handleShowLogin = (e) => {
+    e.preventDefault();
+    setShowLogin(true);
+  };
+
+  const handleCloseSignup = () => setShowSignup(false);
+  const handleShowSignup = (e) => {
+    e.preventDefault();
+    setShowSignup(true);
+  };
+
 
   return (
     <>
@@ -49,7 +67,7 @@ const NavbarCoding = () => {
                   About
                 </Link> */}
                 <NavLink
-                  to="/about"
+                  to="/about-us"
                   className="nav-link"
                   style={({ isActive }) => ({
                     color: isActive ? "yellow" : "white",
@@ -93,7 +111,7 @@ const NavbarCoding = () => {
                 {/* <Link to="/projects" className="nav-link">
                   Project
                 </Link> */}
-                 <NavLink
+                <NavLink
                   to="/projects"
                   className="nav-link"
                   style={({ isActive }) => ({
@@ -105,22 +123,9 @@ const NavbarCoding = () => {
                 >
                   Projects
                 </NavLink>
-                {/* <NavDropdown title="Pages" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">
-                    Right Sidebar
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Dummy Link 1
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Dummy link 2
-                  </NavDropdown.Item>
-                </NavDropdown> */}
-                {/* <Link to="/contact" className="nav-link">
-                  Contact
-                </Link> */}
-                 <NavLink
-                  to="/contact"
+              
+                <NavLink
+                  to="/contact-us"
                   className="nav-link"
                   style={({ isActive }) => ({
                     color: isActive ? "yellow" : "white",
@@ -131,11 +136,43 @@ const NavbarCoding = () => {
                 >
                   Contact
                 </NavLink>
+
+                {/* <NavLink
+                  to="#"
+                  className="nav-link"
+                  style={({ isActive }) => ({
+                    color: isActive ? "yellow" : "white",
+                    fontWeight: isActive ? "bold" : "normal",
+                    textDecoration: "none",
+                    marginRight: "15px",
+                  })}
+                  onClick={handleOpenLogin}   
+                >
+                  Login
+                </NavLink> */}
+
+                  <NavDropdown
+                  title="Account"
+                  id="account-dropdown"
+                  style={{ color: "white", marginRight: "15px" }}
+                >
+                  <NavDropdown.Item href="#" onClick={handleShowLogin}>
+                    Login
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#" onClick={handleShowSignup}>
+                    Sign Up
+                  </NavDropdown.Item>
+                </NavDropdown>
               </Nav>
             </Col>
           </Row>
         </Form>
       </Navbar>
+       {/* <LoginModal show={showLogin} handleClose={handleCloseLogin} /> */}
+
+       <LoginModal show={showLogin} handleClose={handleCloseLogin} />
+      <SignupModal show={showSignup} handleClose={handleCloseSignup} />
+
     </>
   );
 };

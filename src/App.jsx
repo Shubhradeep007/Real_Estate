@@ -1,19 +1,21 @@
 import NavbarCoding from "./components/navbar/Nav.jsx";
-import Home from "./components/Home/Home.jsx";
+import Home from "../src/Pages/Home/Home.jsx";
 import MainFooter from "./components/Footer/MainFooter.jsx";
-import Aboutus from "./components/AboutUs/Aboutus.jsx";
-import Services from "./components/Services/Services.jsx";
-import Price from "./components/Price/Price.jsx";
-import Contact from "./components/Contact/Contact.jsx";
-import Projects from "./components/Projects/Projects.jsx";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SingleCurrentProject from "./components/Home/Current-Projects/SingleCurrentProject.jsx";
-import SingleCompleteProject from "./components/Home/Completed-Projects/SingleComple-project/SingleCompleteProject.jsx";
+import Aboutus from "../src/Pages/AboutUs/Aboutus.jsx";
+import Services from "../src/Pages/Services/Services.jsx";
+import Price from "../src/Pages/Price/Price.jsx";
+import Contact from "../src/Pages/Contact/Contact.jsx";
+import Projects from "../src/Pages/Projects/Projects.jsx";
+import { BrowserRouter, Routes, Route, RouterProvider } from "react-router-dom";
+import SingleCurrentProject from "./Pages/Home/Current-Projects/SingleCurrentProjects/SingleCurrentProject.jsx";
+import SingleCompleteProject from "./Pages/Home/Completed-Projects/SingleComple-project/SingleCompleteProject.jsx";
+import Routing from "./Routes/Routing.jsx";
 
 function App() {
   return (
     <>
-    <BrowserRouter>
+      <RouterProvider router={Routing} />
+    {/* <BrowserRouter>
       <NavbarCoding />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,7 +28,7 @@ function App() {
         <Route path="/project/complete/:id" element={<SingleCompleteProject/>} />
       </Routes>
       <MainFooter />
-    </BrowserRouter>
+    </BrowserRouter> */}
      
     </>
   );

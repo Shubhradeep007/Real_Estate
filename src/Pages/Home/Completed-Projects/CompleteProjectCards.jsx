@@ -22,9 +22,7 @@ const CompleteProjectCards = (props) => {
             <Button
               variant="outline-warning"
               onClick={() =>
-                navigate(`/project/complete/${props.value.id}`, {
-                  state: { obj: props.value },
-                })
+                navigate(`/project/complete/${props.value.id}`,{state: {obj: props.value}} )
               }
             >
               {props.value.pPrice}
