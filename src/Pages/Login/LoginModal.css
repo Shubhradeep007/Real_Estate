@@ -1,8 +1,123 @@
+.inside-modal-bar {
+  position: absolute;
+  top: 50%;
+  right: -64px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  z-index: 2;
+}
+/* Vertical icon bar styles */
+.vertical-icon-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 48px;
+}
+
+.icon-item {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.icon-item:hover {
+  background: #e0e0e0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
 .animated-modal .modal-content {
-  animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
+  animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 @keyframes popIn {
-  0%   { transform: scale(0.8); opacity:0; }
-  80%  { transform: scale(1.05); opacity:1; }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* loging page  */
+
+.login-center-wrapper {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: Arial, sans-serif;
+  background: url(../../../public/login/login-bg.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+.login-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(
+    241,
+    175,
+    175,
+    0.4
+  ); /* or use rgba(0,0,0,0.2) for a darker overlay */
+  z-index: 0;
+}
+
+/* .login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+} */
+
+.login-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2b6b667;
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.15);
+  opacity: 0.92;
+  color: #222;
+  max-width: 620px;
+  max-height: 540px;
+  /* margin-top: %; */
+}
+
+.login-center-wrapper {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.signup-btn {
+  margin-left: 70px;
+}
+
+.login-container Label {
+  font-weight: bold;
+  color: #333;
 }

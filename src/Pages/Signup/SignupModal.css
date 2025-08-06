@@ -15,3 +15,7 @@
     transform: scale(1);
   }
 }
+
+.lbo{
+  min-height: 85vh;
+}

@@ -8,7 +8,7 @@ import "./Search.css"
 const Search = () => {
   return (
     <>
-    <div className="container-fluid">
+    <div className="container-fluid search-pannel">
       <Form>
         <Row>
           <Col>
