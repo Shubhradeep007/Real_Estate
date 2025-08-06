@@ -1,0 +1,41 @@
+
+.login-center-wrapper1 {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: Arial, sans-serif;
+  background: url(../../../public/login/elegant-white-background-with-shiny-lines.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.login-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.4);
+  z-index: 0;
+}
+
+.login-container1 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.15);
+  opacity: 0.92;
+  color: #222;
+  max-width: 720px;
+  min-height: 440px;
+}
+

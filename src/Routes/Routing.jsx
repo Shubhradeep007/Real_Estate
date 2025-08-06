@@ -10,16 +10,16 @@ import Projects from "../Pages/Projects/Projects";
 import Services from "../Pages/Services/Services";
 import SingleCompleteProject from "../Pages/Home/Completed-Projects/SingleComple-project/SingleCompleteProject";
 import SingleCurrentProject from "../Pages/Home/Current-Projects/SingleCurrentProjects/SingleCurrentProject";
-
+import NotFoundPage from "../Pages/NotFoundPage/NotFoundPage";
 
 const Routing = createBrowserRouter([
   {
-      path:"/login",
-      element: <Login />
+    path: "/login",
+    element: <Login />,
   },
   {
-      path:"/signup",
-      element: <SignUp />
+    path: "/signup",
+    element: <SignUp />,
   },
   {
     path: "/",
@@ -56,6 +56,10 @@ const Routing = createBrowserRouter([
       {
         path: "/project/current/:id",
         element: <SingleCurrentProject />,
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,
       },
     ],
   },
